@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cá Nhân | Web Developer</title>
+    
+    <!-- 1. Tích hợp CDN Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- 2. Tích hợp CDN CSS của thư viện AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Nhúng file CSS tự viết -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & 2. NAV -->
+    <header class="header">
+        <nav class="nav-container container">
+            <a href="#" class="logo">Dev<span>Portfolio</span>.</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Trang chủ</a></li>
+                <li><a href="#about">Về tôi</a></li>
+                <li><a href="#projects">Dự án</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 3. MAIN: Khu vực nội dung chính -->
+    <main>
+        
+        <!-- 4. SECTION 1: HERO -->
+        <section id="hero" class="section-hero container">
+            <div class="hero-content">
+                <p class="greeting" data-aos="fade-right">Xin chào, tôi là</p>
+                <!-- Áp dụng Animate.css: Tự động chạy fadeInDown khi load trang -->
+                <h1 class="title animate__animated animate__fadeInDown">Nguyễn Thanh Toàn</h1>
+                <h2 class="subtitle" data-aos="fade-up" data-aos-delay="200">Lập Trình Viên Web (Front-end)</h2>
+                <p class="desc" data-aos="fade-up" data-aos-delay="300">
+                    Tôi đam mê xây dựng các giao diện web hiện đại, tối ưu hiệu suất 
+                    và mang lại trải nghiệm người dùng tuyệt vời nhất bằng HTML & CSS thuần.
+                </p>
+                <!-- Nút CTA -->
+                <div class="cta-group" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="btn btn-primary">Xem Dự Án</a>
+                    <a href="mailto:email@example.com" class="btn btn-outline">Liên Hệ Ngay</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: ABOUT -->
+        <!-- Dùng AOS để hiển thị khối thông tin này khi cuộn tới -->
+        <section id="about" class="section-about container" data-aos="fade-up">
+            <h2 class="section-heading">Về Bản Thân</h2>
+            <div class="about-content">
+                <p>
+                    Với hơn 3 năm kinh nghiệm lập trình, tôi chuyên sử dụng các tiêu chuẩn web 
+                    mới nhất. Thay vì phụ thuộc vào thư viện, tôi thích tạo ra các sản phẩm 
+                    nhẹ gọn, chuẩn Semantic và Responsive tinh tế chỉ với CSS Grid/Flexbox.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PROJECTS -->
+        <section id="projects" class="section-projects container">
+            <!-- Hiệu ứng chạy từ trái sang phải cho Tiêu đề -->
+            <h2 class="section-heading" data-aos="fade-right">Dự Án Nổi Bật</h2>
+            
+            <div class="projects-grid">
+                
+                <!-- Thẻ dự án 1: Dùng data-aos="zoom-in" với độ trễ (delay) khác nhau tạo hiệu ứng thác đổ -->
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://via.placeholder.com/600x350/1E293B/38BDF8?text=Project+1" alt="Dự án 1" class="project-img">
+                    <div class="project-info">
+                        <h3>E-commerce Landing Page</h3>
+                        <p>Trang đích bán hàng tối ưu chuyển đổi, thiết kế chuẩn Semantic và không sử dụng Javascript.</p>
+                        <a href="#" class="project-link" tabindex="0">Xem chi tiết &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Thẻ dự án 2 -->
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://via.placeholder.com/600x350/1E293B/818CF8?text=Project+2" alt="Dự án 2" class="project-img">
+                    <div class="project-info">
+                        <h3>Admin Dashboard UI</h3>
+                        <p>Giao diện quản trị viên thiết kế linh hoạt hoàn toàn bằng sức mạnh của CSS Grid & Flexbox.</p>
+                        <a href="#" class="project-link" tabindex="0">Xem chi tiết &rarr;</a>
+                    </div>
+                </article>
+
+                <!-- Thẻ dự án 3 -->
+                <article class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://via.placeholder.com/600x350/1E293B/38BDF8?text=Project+3" alt="Dự án 3" class="project-img">
+                    <div class="project-info">
+                        <h3>Cá nhân Blog Template</h3>
+                        <p>Theme blog siêu nhẹ, tập trung tối đa vào trải nghiệm đọc (Typography) và chuẩn SEO.</p>
+                        <a href="#" class="project-link" tabindex="0">Xem chi tiết &rarr;</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Code & Thiết kế bởi Nguyễn Văn A. (Pure HTML/CSS)</p>
+        </div>
+    </footer>
+
+    <!-- ==============================================
+         JAVASCRIPT INIT (Khởi tạo thư viện AOS)
+         ============================================== -->
+    <!-- Nhúng thư viện Javascript của AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Script cấu hình và kích hoạt hiệu ứng cuộn trang -->
+    <script>
+        AOS.init({
+            duration: 800,         // Thời gian chạy hiệu ứng (800ms = 0.8 giây)
+            easing: 'ease-in-out', // Gia tốc mượt mà
+            once: true,            // Hiệu ứng chỉ chạy 1 lần duy nhất khi cuộn xuống
+            offset: 100            // Bắt đầu hiệu ứng khi cách cạnh dưới màn hình 100px
+        });
+    </script>
+</body>
+</html>
